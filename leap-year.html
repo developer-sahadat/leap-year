@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <style>
+        h1{
+            text-align: center;
+            padding-top:2%;
+            color: red;
+            text-shadow: 5px 5px 10px rgb(128, 128, 128);
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        h2{
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        div{
+            width: 80%;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+
+        <h1 id="#heading"></h1>
+
+        <br><br>
+
+        <div>
+            <h2>😍I Love JavaScript😍</h2>
+           <div>
+            <h4>আমি কেন জাভাস্ক্রিপ্ট এর প্রেমে পড়েছি</h4>
+            <ul>
+                <li>জাভাস্ক্রিপ্ট অনেক স্মার্ট 😉</li>
+                <li>মাথা নষ্ট করে দেয় 😔</li>
+                <li> দিনরাত  তার পিছে আঠার মত লেগে থাকি 😓</li>
+                <li>তাকে পটাতে আমার অনেক কষ্ট হচ্ছে 😔</li>
+                <li>কষ্ট করে যাকে পাওয়া যাই, সে নাকি সারাজিবন আমার পাশে থাকে তাই তার পিছে লেগে আছি 😘</li>
+            </ul>
+
+            <p>জাভাস্ক্রিপ্ট তোমাকে অনেক ভালোবাসি. প্লিজ আমাকে ভালোবাসো. আমি তোমাকে সারা ডেভেলপমেন্ট করতে পারবো না গো </p>
+
+            <p>আমি তোমার সব প্রোপার্টি গুলো ভালো ভাবে শিখবো. তোমাকে মাথায় করে রাখবো.</p>
+           </div>
+        </div>
+     
+
+    <script>
+        var text=document.getElementById("#heading")
+        function checkLeapyear(x){
+            switch(true){
+                case (x %4==0 && x%100!=0 || x%400==0):
+                // document.write(`<h1> ${x} is a leap year</h1>`);
+                    text.innerHTML=x + " &nbsp;" + "Is a leap year";
+                break;
+                default:
+                // document.write(`<h1> ${x} is not a leap year</h1>`);
+                text.innerHTML= x + " &nbsp;"+ "Is not a leap year";
+            }
+        }    
+
+
+        let year=prompt("Enter a Year");
+
+         checkLeapyear(year)
+
+    </script>
+
+</body>
+</html>
